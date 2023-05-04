@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACME RENTALS</title>
+    <script src="car-rental.js"></script>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Rental A Car</legend>
+        <label>Pick Up Date :</label>
+          <input type="date" id="pudInput" /><br />
+        <label>Number of Days :</label>
+          <input type="number" id="nodInput" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Options</legend>
+      <input type="checkbox" id="tollTag" />
+      <label for="tollTag">Electronic Toll Tag ($3.95/day pluss tolls)</label
+      ><br />
+      <input type="checkbox" id="gps" />
+      <label for="gps">GPS ($2.95/day)</label>
+      <br />
+      <input type="checkbox" id="roadside" />
+      <label for="roadside">Roadside Assistance ($2.95/day)</label>
+    </fieldset>
+    <fieldset>
+      <legend>Under 25</legend>
+        <div class="form-check">
+          <input
+            type="radio"
+            name="under25"
+            id="notUnder25"
+            value="no"
+            class="form-check-input"
+          />
+              <label 
+                class="form-check-label"
+                for="notUnder25">No
+              </label>
+        </div>         
+        <div class="form-check">
+          <input
+            type="radio" 
+            name="under25"
+            id="yesUnder25"
+            value="yes"
+            class="form-check-input"
+
+          />
+            <label
+                class="form-check-label"
+                for="yesUnder25">Yes
+            </label>
+        </div>
+  
+    </fieldset><br>
+      <input type="button"
+             id="estimateBtn"
+             class="onlyBtn"
+             value="Estimate Total Cost"
+      >
+      <table class="table">
+        <thead></thead>
+        <tr>
+          <td>Car Rental: $</td>
+          <td id="baseCost"></td>
+        </tr>
+        <tr>
+          <td>Options: $</td>
+          <td id="optionsCost"></td>
+        </tr>
+        <tr>
+          <td>Under 25 surcharge: $</td>
+          <td id="under25Cost"></td>
+        </tr>
+      </table>
+      <br />
+      <table>
+        <tr>
+          <td>Total Due: $</td>
+          <td id="totalDue"></td>
+        </tr>
+      </table>
+    </fieldset>
+  </body>
+</html>
